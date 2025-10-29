@@ -9,189 +9,117 @@
     :root {
       --nero: #000;
       --bianco: #fff;
+      --verdewp: #25d366;
       --arancio: #ff9100;
-      --ombra: 0 8px 30px rgba(0,0,0,0.07), 0 1.5px 4px rgba(0,0,0,0.08);
-      --radius: 24px;
     }
     html, body {
       min-height: 100%;
       margin: 0;
       padding: 0;
-      background: var(--bianco);
+      background: var(--nero);
       font-family: 'Montserrat', Arial, sans-serif;
-      color: var(--nero);
+      color: var(--bianco);
       box-sizing: border-box;
     }
     body {
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
       justify-content: flex-start;
-      margin: 0;
+      align-items: center;
     }
     .hero {
       width: 100%;
-      background: var(--nero);
-      background: linear-gradient(120deg, #000 0%, #181818 100%);
-      color: var(--bianco);
+      min-height: 100vh;
+      background: linear-gradient(120deg, #000 0%, #171818 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 18px;
       text-align: center;
-      padding: 70px 6vw 65px 6vw;
-      border-bottom-left-radius: var(--radius);
-      border-bottom-right-radius: var(--radius);
-      box-shadow: var(--ombra);
     }
     .hero h1 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 800;
-      font-size: 3.1em;
-      margin: 0 0 18px 0;
-      letter-spacing: -.8px;
-      line-height: 1.05;
-      text-shadow: 0 2px 30px #00000036;
+      font-size: 2.7em;
+      margin: 0 0 15px 0;
+      letter-spacing: -1px;
+      line-height: 1.07;
     }
     .hero .sub {
-      font-size: 1.5em;
-      margin-bottom: 27px;
+      font-size: 1.45em;
       color: var(--arancio);
       font-weight: 800;
-      letter-spacing: .6px;
-      text-transform: uppercase;
+      letter-spacing: .7px;
+      margin-bottom: 40px;
     }
-    .hero p {
-      font-size: 1.4em;
-      line-height: 1.45;
-      margin: 0 auto 35px auto;
-      max-width: 620px;
-      color: #fffbe6;
+    .hero .maintext {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.5em;
       font-weight: 500;
+      line-height: 1.25;
+      margin: 0 0 55px 0;
+      max-width: 830px;
     }
+    .hero .maintext span {
+      margin: 11px 0;
+      display: block;
+      font-size: 1.1em;
+    }
+    .hero .maintext span b { font-weight: 800; }
     .cta-btn {
       display: inline-flex;
       align-items: center;
-      background: var(--arancio);
+      background: var(--verdewp);
       color: var(--nero);
       font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 800;
       border-radius: 40px;
       border: 0;
-      font-size: 1.4em;
+      font-size: 1.35em;
       text-transform: uppercase;
-      padding: 22px 44px 22px 66px;
-      margin: 44px 0 0 0;
+      padding: 24px 52px 24px 68px;
+      margin: 50px 0 0 0;
       text-decoration: none;
-      box-shadow: 0 6px 24px 0 rgba(255,145,0,0.13), 0 1.5px 4px rgba(0,0,0,0.12);
+      box-shadow: 0 6px 28px 0 rgba(37,211,102,0.17), 0 1.5px 4px rgba(0,0,0,0.12);
       position: relative;
       cursor: pointer;
-      transition: background 0.18s;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.45px;
+      transition: background 0.18s, box-shadow 0.22s;
     }
     .cta-btn:hover {
-      background: #ffb046;
-      color: var(--nero);
+      filter: brightness(1.07);
+      box-shadow: 0 12px 38px 0 rgba(37,211,102,0.22);
     }
     .cta-btn svg {
       position: absolute;
       left: 25px;
       top: 50%;
       transform: translateY(-50%);
+      width: 2.1em;
+      height: 2.1em;
+      background: #fff;
+      border-radius: 100%;
+      padding: 3px;
+      box-shadow: 0 2.5px 7px #0001;
     }
-    .cards-section {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: stretch;
-      gap: 36px;
-      padding: 70px 4vw 40px 4vw;
-      min-height: 350px;
-      flex: 1;
-      background: var(--bianco);
+    @media (max-width: 800px) {
+      .hero .maintext { font-size: 1.19em; }
+      .hero h1 { font-size: 1.65em; line-height: 1.18;}
+      .hero .sub { font-size: 1.05em;}
+      .cta-btn {font-size: 1em; padding: 17px 19px 17px 46px;}
+      .cta-btn svg {width: 1.5em; height: 1.5em; left: 16px;}
+      .hero {padding: 0 5vw;}
+      .hero .maintext span { font-size: 1em;}
+      .hero .maintext {margin-bottom: 36px;}
     }
-    .card {
-      flex: 1 1 330px;
-      max-width: 370px;
-      background: #fff7ec;
-      border-radius: var(--radius);
-      box-shadow: var(--ombra);
-      padding: 42px 30px 34px 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-bottom: 24px;
-      min-height: 310px;
-    }
-    .card h2 {
-      color: var(--nero);
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-weight: 800;
-      font-size: 1.36em;
-      margin: 0 0 16px 0;
-      text-transform: uppercase;
-      letter-spacing: .7px;
-    }
-    .card ul {
-      list-style: none;
-      padding: 0;
-      font-size: 1.14em;
-      font-weight: 600;
-      margin: 0;
-    }
-    .card li {
-      margin-bottom: 1.1em;
-      line-height: 1.5;
-      color: #272727;
-    }
-    .card li strong { color: var(--arancio); }
-    .footer {
-      margin-top: auto;
-      background: var(--nero);
-      color: var(--bianco);
-      border-top-left-radius: var(--radius);
-      border-top-right-radius: var(--radius);
-      padding: 38px 10px 19px 10px;
-      text-align: center;
-      font-size: 1.13em;
-      box-shadow: var(--ombra);
-    }
-    .contacts {
-      margin-bottom: 8px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 28px;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.12em;
-    }
-    .contacts span {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--arancio);
-      font-weight: 700;
-    }
-    .contacts svg {
-      vertical-align: middle;
-      width: 21px;
-      height: 21px;
-    }
-    @media (max-width: 1160px) {
-      .cards-section {flex-direction: column; gap: 32px; align-items: center;}
-      .card {max-width: 94vw;}
-    }
-    @media (max-width: 650px) {
-      .hero {padding-top: 34px; padding-bottom: 30px;}
-      .hero h1 {font-size: 2em;}
-      .hero .sub {font-size: 1em;}
-      .hero p {font-size: 1.09em;}
-      .cta-btn {font-size: 1em; padding: 15px 19px 15px 45px;}
-      .cards-section {padding: 22px 2vw 18px 2vw;}
-      .card {padding: 29px 14px 21px 14px;}
-      .footer {font-size: .99em;}
-    }
-    @media (max-width: 425px) {
-      .hero h1 {font-size: 1.45em;}
-      .card h2 {font-size: 1.08em;}
-      .footer, .contacts {font-size: .89em;}
-      .contacts {gap: 10px;}
+    @media (max-width: 520px) {
+      .hero h1 {font-size: 1.11em; margin-bottom:12px;}
+      .hero .maintext {font-size: .98em; margin-bottom:24px;}
+      .cta-btn {font-size: .92em; padding: 13px 8vw 13px 15vw;}
     }
   </style>
 </head>
@@ -199,61 +127,16 @@
   <section class="hero">
     <h1>PROTEGGIAMO LA TUA ATTIVITÀ</h1>
     <div class="sub">ZERO GUASTI E SECCATURE</div>
-    <p>
-      Se il computer o la stampante si bloccano, perdi clienti e tempo.<br><br>
-      Non serve assumere nessuno o cercare soluzioni last minute:<br><br>
-      <strong>affidati a noi</strong> e con i nostri servizi "zero pensieri" torni subito operativo.<br>
-      Tu pensa al tuo lavoro, ai problemi tecnici pensiamo noi.
-    </p><br>
-    <a class="cta-btn" target="_blank" href="https://wa.me/393471796633?text=Ciao,%20voglio%20ricevere%20pi%C3%B9%20informazioni">
-      <svg fill="#fff" viewBox="0 0 32 32" width="28" height="28"><circle fill="#000" cx="16" cy="16" r="16"/><path fill="#ff9100" d="M24.19 21.09c-.36-.18-2.13-1.05-2.45-1.18-.32-.13-.55-.19-.77.12s-.88 1.07-1.08 1.3c-.2.21-.38.24-.7.08a7.65 7.65 0 01-2.29-1.42 8.29 8.29 0 01-1.54-1.87c-.16-.27-.02-.41.12-.56.13-.13.27-.32.41-.48.14-.16.19-.27.29-.44.1-.17.05-.31-.01-.44-.06-.14-.62-1.5-.85-2.08-.22-.52-.42-.45-.62-.46-.16-.01-.35-.02-.54-.02-.19 0-.36.06-.49.18-.13.11-.5.49-.5 1.22s.52 1.41.61 1.5c.09.1 1.04 1.59 2.5 2.18.35.15.62.22.83.28a2.28 2.28 0 001.08.07c.33-.07 1.02-.42 1.16-.85.14-.43.14-.8.1-.88z"/></svg>
-      Contattaci su WhatsApp
+    <div class="maintext">
+      <span>Se il computer o la stampante si bloccano, perdi clienti e tempo.</span>
+      <span>Non serve assumere nessuno o cercare soluzioni last minute:</span>
+      <span><b>affidati a noi</b> e con i nostri servizi "zero pensieri" torni subito operativo.</span>
+      <span>Tu pensa al tuo lavoro, ai problemi tecnici pensiamo noi.</span>
+    </div>
+    <a class="cta-btn" target="_blank" href="https://wa.me/393471796633?text=Ciao,%20voglio%20ricevere%20pi%C3%B9%20info!">
+      <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#25d366"/><path d="M22.4 9.60103C20.9 8.10103 19 7.33336 17 7.33336C12.58 7.33336 9 10.9134 9 15.3334C9 16.7934 9.38 18.1934 10.13 19.4134L9 24.6667L14.04 23.0734C15.23 23.6067 16.6 23.8334 18 23.8334C22.42 23.8334 26 20.2534 26 15.8334C26 13.8334 25.23 11.9334 23.73 10.4334L22.4 9.60103Z" fill="#fff"/><path d="M20.58 19.0133C20.27 17.8933 20.02 17.5733 19.02 17.2533C18.02 16.9333 17.8 16.7533 18.04 16.4333C18.27 16.1266 19.12 15.1266 18.85 14.5066C18.55 13.8333 17.73 13.9666 17.2 14.0466C16.667 14.12 15.5867 14.2 15.18 13.4666C14.7933 12.7866 15.0333 12.0666 15.26 11.7733C15.487 11.48 15.7133 11.4666 16.1333 11.5733C16.5733 11.6866 17.38 12.1933 18.3533 12.8333C18.8333 13.16 19.1467 13.22 19.3133 13.16C19.5 13.0933 19.5333 12.9133 19.4 12.8066C19.28 12.7066 17.9467 11.6066 16.28 11.4133C15.2133 11.2866 14.6533 11.5999 14.4067 11.8133C14.1933 12.02 13.5467 12.6666 13.5 14.2266C13.4667 15.3933 13.88 16.2533 15.0667 16.9466C15.9267 17.4399 17.14 17.7533 18.1533 17.9733C19.18 18.1933 19.6 18.0133 20.0233 17.88C20.4167 17.76 20.7667 17.5133 21.1 17.2733C21.4667 17.0133 21.02 16.4266 20.58 19.0133Z" fill="#25d366"/></svg>
+      CONTATTACI SU WHATSAPP
     </a>
   </section>
-
-  <section class="cards-section">
-    <div class="card">
-      <h2>ASSISTENZA INFORMATICA</h2>
-      <ul>
-        <li><strong>ZERO STRESS</strong>: qualcosa si blocca? Ci pensiamo noi</li>
-        <li>Supporto prioritario: una chiamata e siamo da te</li>
-        <li>A partire da <strong>1€ al giorno</strong>, senza sorprese</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h2>NOLEGGIO STAMPANTE</h2>
-      <ul>
-        <li>Stampa senza pensieri (pensiamo a tutto noi)</li>
-        <li>Manutenzione inclusa</li>
-        <li>A partire da <strong>30€/mese</strong>, tutto incluso</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h2>VENDITA TONER</h2>
-      <ul>
-        <li>Toner originali e compatibili</li>
-        <li><strong>Consegna rapida</strong> dove vuoi tu</li>
-        <li>Mai più a secco (consegna automatica in base ai consumi)</li>
-      </ul>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="contacts">
-      <span>
-        <svg viewBox="0 0 24 24"><path d="M20 17.17V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2.83A7.973 7.973 0 0 0 12 22c2.21 0 4.21-.9 5.65-2.35zM12 2C6.477 2 2 6.477 2 12c0 4.418 3.134 8.09 7.367 8.828A4.982 4.982 0 0 1 8 19.344V17a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2.344c-.36.156-.732.28-1.122.364A7.978 7.978 0 0 0 22 12c0-5.523-4.477-10-10-10z" fill="#ff9100"/></svg>
-        3471796633
-      </span>
-      <span>
-        <svg viewBox="0 0 24 24"><path d="M21 4H3a2 2 0 0 0-2 2v12c0 1.104.896 2 2 2h18a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM3 6h18v12H3V6zm9 10l6-4-6-4-6 4 6 4z" fill="#ff9100"/></svg>
-        info@easyt.it
-      </span>
-      <span>
-        <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 1,0 22,12A10,10 0 0,0 12,2ZM12 20A8,8 0 1,1 20,12A8,8 0 0,1 12,20Z" fill="#ff9100"/></svg>
-        easyt.it
-      </span>
-    </div>
-    EASY TECH SAS
-  </footer>
 </body>
 </html>
