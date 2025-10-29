@@ -4,167 +4,194 @@
   <meta charset="UTF-8">
   <title>Proteggiamo la tua attività | Easy Tech SAS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --main-blue: #233c5a;
-      --accent-gold: #ecbe57;
-      --gradient-1: linear-gradient(135deg, #2461b1 0%, #53c4ff 100%);
-      --gradient-2: linear-gradient(135deg, #e3e3e3 0%, #ffffff 100%);
-      --shadow: 0 10px 32px 0 rgba(35, 60, 90, 0.10);
-      --card-radius: 22px;
-      --section-radius: 32px;
+      --nero: #000;
+      --bianco: #fff;
+      --arancio: #ff9100;
+      --ombra: 0 8px 30px rgba(0,0,0,0.07), 0 1.5px 4px rgba(0,0,0,0.08);
+      --radius: 24px;
+    }
+    html, body {
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      background: var(--bianco);
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: var(--nero);
+      box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f2f7fa;
-      margin: 0;
-      color: var(--main-blue);
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 0;
     }
     .hero {
-      background: var(--gradient-1);
-      color: #fff;
+      width: 100%;
+      background: var(--nero);
+      background: linear-gradient(120deg, #000 0%, #181818 100%);
+      color: var(--bianco);
       text-align: center;
-      padding: 60px 18px 40px 18px;
-      border-bottom-left-radius: var(--section-radius);
-      border-bottom-right-radius: var(--section-radius);
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
+      padding: 70px 6vw 65px 6vw;
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+      box-shadow: var(--ombra);
     }
     .hero h1 {
-      margin: 0 0 15px 0;
-      font-size: 2.4em;
-      font-weight: bold;
-      letter-spacing: -1.5px;
-      text-shadow: 0 4px 28px rgba(35,60,90,0.11);
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 800;
+      font-size: 3.1em;
+      margin: 0 0 18px 0;
+      letter-spacing: -.8px;
+      line-height: 1.05;
+      text-shadow: 0 2px 30px #00000036;
     }
     .hero .sub {
-      color: var(--accent-gold);
+      font-size: 1.5em;
+      margin-bottom: 27px;
+      color: var(--arancio);
+      font-weight: 800;
       letter-spacing: .6px;
-      font-size: 1.18em;
-      font-weight: 600;
-      margin-bottom: 18px;
-      line-height: 1.2;
+      text-transform: uppercase;
     }
     .hero p {
-      font-size: 1.15em;
-      max-width: 620px;
-      margin: 0 auto 22px auto;
+      font-size: 1.4em;
       line-height: 1.45;
-      color: #ecf4ff;
-      text-shadow: 0 2px 14px rgba(35,60,90,0.10);
+      margin: 0 auto 35px auto;
+      max-width: 620px;
+      color: #fffbe6;
+      font-weight: 500;
     }
     .cta-btn {
       display: inline-flex;
       align-items: center;
-      background: linear-gradient(90deg, #25d366 0%, #00b661 100%);
-      color: #fff;
+      background: var(--arancio);
+      color: var(--nero);
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 800;
       border-radius: 40px;
       border: 0;
-      font-size: 1.24em;
-      font-weight: bold;
-      padding: 20px 38px 20px 56px;
-      margin: 35px 0 0 0;
+      font-size: 1.4em;
+      text-transform: uppercase;
+      padding: 22px 44px 22px 66px;
+      margin: 44px 0 0 0;
       text-decoration: none;
-      box-shadow: 0 6px 24px 0 rgba(37, 211, 102, 0.12);
+      box-shadow: 0 6px 24px 0 rgba(255,145,0,0.13), 0 1.5px 4px rgba(0,0,0,0.12);
       position: relative;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: background 0.18s;
+      letter-spacing: 0.6px;
+    }
+    .cta-btn:hover {
+      background: #ffb046;
+      color: var(--nero);
     }
     .cta-btn svg {
       position: absolute;
-      left: 22px;
-      top: 48%;
+      left: 25px;
+      top: 50%;
       transform: translateY(-50%);
     }
-    .section-cards {
-      margin-top: -55px;
-      padding: 0 5vw 0 5vw;
+    .cards-section {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: row;
       justify-content: center;
-      gap: 40px 32px;
-      z-index: 1;
-      position: relative;
+      align-items: stretch;
+      gap: 36px;
+      padding: 70px 4vw 40px 4vw;
+      min-height: 350px;
+      flex: 1;
+      background: var(--bianco);
     }
     .card {
-      flex: 1 1 285px;
-      max-width: 350px;
-      min-width: 270px;
-      background: var(--gradient-2);
-      border-radius: var(--card-radius);
-      box-shadow: var(--shadow);
-      padding: 38px 28px 26px 28px;
-      margin-top: 28px;
-      margin-bottom: 20px;
+      flex: 1 1 330px;
+      max-width: 370px;
+      background: #fff7ec;
+      border-radius: var(--radius);
+      box-shadow: var(--ombra);
+      padding: 42px 30px 34px 30px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      margin-bottom: 24px;
+      min-height: 310px;
     }
     .card h2 {
-      color: var(--main-blue);
-      font-size: 1.2em;
-      margin: 0 0 9px 0;
-      font-weight: bold;
-      letter-spacing: .7px;
+      color: var(--nero);
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 800;
+      font-size: 1.36em;
+      margin: 0 0 16px 0;
       text-transform: uppercase;
+      letter-spacing: .7px;
     }
     .card ul {
       list-style: none;
       padding: 0;
-      font-size: 1.02em;
+      font-size: 1.14em;
+      font-weight: 600;
       margin: 0;
     }
     .card li {
-      margin-bottom: 11px;
+      margin-bottom: 1.1em;
       line-height: 1.5;
+      color: #272727;
     }
-    .card li:last-child { margin-bottom: 0; }
+    .card li strong { color: var(--arancio); }
     .footer {
-      margin-top: 50px;
-      background: var(--main-blue);
-      color: #fff;
-      border-top-left-radius: var(--section-radius);
-      border-top-right-radius: var(--section-radius);
-      padding: 26px 12px 18px 12px;
-      box-shadow: var(--shadow);
+      margin-top: auto;
+      background: var(--nero);
+      color: var(--bianco);
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+      padding: 38px 10px 19px 10px;
       text-align: center;
-      font-size: 1.05em;
+      font-size: 1.13em;
+      box-shadow: var(--ombra);
     }
     .contacts {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       display: flex;
       flex-wrap: wrap;
-      gap: 25px;
+      gap: 28px;
       justify-content: center;
       align-items: center;
-      font-size: 1em;
+      font-size: 1.12em;
     }
     .contacts span {
       display: flex;
       align-items: center;
-      gap: 7px;
+      gap: 8px;
+      color: var(--arancio);
+      font-weight: 700;
     }
     .contacts svg {
       vertical-align: middle;
-      width: 18px;
-      height: 18px;
-      color: var(--accent-gold);
+      width: 21px;
+      height: 21px;
     }
-    @media (max-width: 900px) {
-      .section-cards {flex-direction: column; gap: 32px;}
-      .card {max-width: 98vw;}
+    @media (max-width: 1160px) {
+      .cards-section {flex-direction: column; gap: 32px; align-items: center;}
+      .card {max-width: 94vw;}
     }
     @media (max-width: 650px) {
-      .hero {padding: 38px 6vw 26px 6vw;}
-      .cta-btn {padding: 15px 21px 15px 47px; font-size: 1.03em;}
+      .hero {padding-top: 34px; padding-bottom: 30px;}
+      .hero h1 {font-size: 2em;}
+      .hero .sub {font-size: 1em;}
+      .hero p {font-size: 1.09em;}
+      .cta-btn {font-size: 1em; padding: 15px 19px 15px 45px;}
+      .cards-section {padding: 22px 2vw 18px 2vw;}
+      .card {padding: 29px 14px 21px 14px;}
+      .footer {font-size: .99em;}
     }
-    @media (max-width: 490px) {
-      .section-cards {padding: 0 1vw;}
-      .hero h1 {font-size: 1.4em;}
-      .footer {font-size: .98em;}
-      .contacts {gap: 13px;}
+    @media (max-width: 425px) {
+      .hero h1 {font-size: 1.45em;}
+      .card h2 {font-size: 1.08em;}
+      .footer, .contacts {font-size: .89em;}
+      .contacts {gap: 10px;}
     }
   </style>
 </head>
@@ -174,18 +201,19 @@
     <div class="sub">ZERO GUASTI E SECCATURE</div>
     <p>
       Se il computer o la stampante si bloccano, perdi clienti e tempo.<br>
-      Non serve assumere nessuno o cercare soluzioni last minute: <strong>affidati a noi</strong> e con i nostri servizi "zero pensieri" torni subito operativo.<br>
-      Tu pensa al tuo lavoro, ai problemi tecnici, pensiamo noi.
+      Non serve assumere nessuno o cercare soluzioni last minute:
+      <strong>affidati a noi</strong> e con i nostri servizi "zero pensieri" torni subito operativo.<br>
+      Tu pensa al tuo lavoro, ai problemi tecnici pensiamo noi.
     </p>
     <a class="cta-btn" target="_blank" href="https://wa.me/393471796633?text=Ciao,%20voglio%20ricevere%20pi%C3%B9%20info!">
-      <svg fill="#fff" viewBox="0 0 32 32" width="28" height="28"><circle fill="#25d366" cx="16" cy="16" r="16"/><path fill="#fff" d="M24.19 21.09c-.36-.18-2.13-1.05-2.45-1.18-.32-.13-.55-.19-.77.12s-.88 1.07-1.08 1.3c-.2.21-.38.24-.7.08a7.65 7.65 0 01-2.29-1.42 8.29 8.29 0 01-1.54-1.87c-.16-.27-.02-.41.12-.56.13-.13.27-.32.41-.48.14-.16.19-.27.29-.44.1-.17.05-.31-.01-.44-.06-.14-.62-1.5-.85-2.08-.22-.52-.42-.45-.62-.46-.16-.01-.35-.02-.54-.02-.19 0-.36.06-.49.18-.13.11-.5.49-.5 1.22s.52 1.41.61 1.5c.09.1 1.04 1.59 2.5 2.18.35.15.62.22.83.28a2.28 2.28 0 001.08.07c.33-.07 1.02-.42 1.16-.85.14-.43.14-.8.1-.88z"/></svg>
+      <svg fill="#fff" viewBox="0 0 32 32" width="28" height="28"><circle fill="#000" cx="16" cy="16" r="16"/><path fill="#ff9100" d="M24.19 21.09c-.36-.18-2.13-1.05-2.45-1.18-.32-.13-.55-.19-.77.12s-.88 1.07-1.08 1.3c-.2.21-.38.24-.7.08a7.65 7.65 0 01-2.29-1.42 8.29 8.29 0 01-1.54-1.87c-.16-.27-.02-.41.12-.56.13-.13.27-.32.41-.48.14-.16.19-.27.29-.44.1-.17.05-.31-.01-.44-.06-.14-.62-1.5-.85-2.08-.22-.52-.42-.45-.62-.46-.16-.01-.35-.02-.54-.02-.19 0-.36.06-.49.18-.13.11-.5.49-.5 1.22s.52 1.41.61 1.5c.09.1 1.04 1.59 2.5 2.18.35.15.62.22.83.28a2.28 2.28 0 001.08.07c.33-.07 1.02-.42 1.16-.85.14-.43.14-.8.1-.88z"/></svg>
       Contattaci su WhatsApp
     </a>
   </section>
 
-  <section class="section-cards">
+  <section class="cards-section">
     <div class="card">
-      <h2>Assistenza Informatica</h2>
+      <h2>ASSISTENZA INFORMATICA</h2>
       <ul>
         <li><strong>ZERO STRESS</strong>: qualcosa si blocca? Ci pensiamo noi</li>
         <li>Supporto prioritario: una chiamata e siamo da te</li>
@@ -193,7 +221,7 @@
       </ul>
     </div>
     <div class="card">
-      <h2>Noleggio Stampante</h2>
+      <h2>NOLEGGIO STAMPANTE</h2>
       <ul>
         <li>Stampa senza pensieri (pensiamo a tutto noi)</li>
         <li>Manutenzione inclusa</li>
@@ -201,7 +229,7 @@
       </ul>
     </div>
     <div class="card">
-      <h2>Vendita Toner</h2>
+      <h2>VENDITA TONER</h2>
       <ul>
         <li>Toner originali e compatibili</li>
         <li><strong>Consegna rapida</strong> dove vuoi tu</li>
@@ -213,15 +241,15 @@
   <footer class="footer">
     <div class="contacts">
       <span>
-        <svg viewBox="0 0 24 24"><path d="M20 17.17V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2.83A7.973 7.973 0 0 0 12 22c2.21 0 4.21-.9 5.65-2.35zM12 2C6.477 2 2 6.477 2 12c0 4.418 3.134 8.09 7.367 8.828A4.982 4.982 0 0 1 8 19.344V17a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2.344c-.36.156-.732.28-1.122.364A7.978 7.978 0 0 0 22 12c0-5.523-4.477-10-10-10z" fill="#ecbe57"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M20 17.17V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2.83A7.973 7.973 0 0 0 12 22c2.21 0 4.21-.9 5.65-2.35zM12 2C6.477 2 2 6.477 2 12c0 4.418 3.134 8.09 7.367 8.828A4.982 4.982 0 0 1 8 19.344V17a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2.344c-.36.156-.732.28-1.122.364A7.978 7.978 0 0 0 22 12c0-5.523-4.477-10-10-10z" fill="#ff9100"/></svg>
         3471796633
       </span>
       <span>
-        <svg viewBox="0 0 24 24"><path d="M21 4H3a2 2 0 0 0-2 2v12c0 1.104.896 2 2 2h18a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM3 6h18v12H3V6zm9 10l6-4-6-4-6 4 6 4z" fill="#ecbe57"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M21 4H3a2 2 0 0 0-2 2v12c0 1.104.896 2 2 2h18a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM3 6h18v12H3V6zm9 10l6-4-6-4-6 4 6 4z" fill="#ff9100"/></svg>
         info@easyt.it
       </span>
       <span>
-        <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 1,0 22,12A10,10 0 0,0 12,2ZM12 20A8,8 0 1,1 20,12A8,8 0 0,1 12,20Z" fill="#ecbe57"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 1,0 22,12A10,10 0 0,0 12,2ZM12 20A8,8 0 1,1 20,12A8,8 0 0,1 12,20Z" fill="#ff9100"/></svg>
         easyt.it
       </span>
     </div>
