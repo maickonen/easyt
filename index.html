@@ -142,6 +142,28 @@
       color: #272727;
     }
     .card li strong { color: var(--arancio); }
+    .footer {
+      width: 100%;
+      background: #111;
+      color: var(--arancio);
+      text-align: center;
+      padding: 42px 10px 28px 10px;
+      font-size: 1.13em;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+      margin-top: 0;
+    }
+    .footer a {
+      color: var(--arancio);
+      text-decoration: none;
+      font-weight: 700;
+      margin: 0 12px;
+      word-break: break-word;
+    }
+    .footer a:hover { text-decoration: underline; }
     @media (max-width: 1160px) {
       .cards-section {flex-direction: column; gap: 32px; align-items: center;}
       .card {max-width: 97vw;}
@@ -152,8 +174,6 @@
       .hero .sub { font-size: 1.05em;}
       .cta-btn {font-size: 1em; padding: 17px 21px;}
       .hero {padding: 0 5vw;}
-      .hero .maintext span { font-size: 1em;}
-      .hero .maintext {margin-bottom: 36px;}
       .cards-section {padding: 22px 2vw 18px 2vw; min-height: 230px;}
       .card {padding: 29px 14px 21px 14px;}
     }
@@ -162,6 +182,7 @@
       .hero .maintext {font-size: .99em; margin-bottom:24px;}
       .cta-btn {font-size: .89em; padding: 13px 7vw;}
       .cards-section {padding-top: 8vw; padding-bottom: 7vw;}
+      .footer {font-size: .97em; padding: 32px 6px 18px 6px;}
     }
   </style>
 </head>
@@ -206,5 +227,13 @@
       </ul>
     </div>
   </section>
+
+  <footer class="footer">
+    <div>
+      Contatti: <a href="tel:3471796633">3471796633</a> | 
+      <a href="mailto:info@easyt.it">info@easyt.it</a>
+    </div>
+    EASY TECH SAS
+  </footer>
 </body>
 </html>
